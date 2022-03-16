@@ -1,40 +1,36 @@
-# CPF Util
+# CPF Utility
 A simple package that provides [CPF](https://en.wikipedia.org/wiki/CPF_number) utilities.
 
 A CPF is an 11 digit number which is the Brazilian individual identity number.
 
 Example of a formatted CPF: 321.524.051-37
 
-## Getting started
-cpf_util provides 3 functions:
-- generateCpf | Generate a valid CPF.
-- validateCpf | Validate and concludes if a given CPF is valid.
-- formatCpf   | Formats an unformatted CPF to the standard CPF format.
-
-generateCpf has a `state` parameter, which is useful if you want to generate a CPF for a given Brazilian
-state, the 9th digit determines which state the CPF belongs to.
-
 ## Usage
 
 To generate a valid CPF simply:
 ```dart
-String myCpf = generateCpf();
+String myCpf = Cpf.generate();
 ```
 
 If you want to generate a valid CPF from a given Brazilian state you can use the State enum:
 ```dart
-String myCpf = generateCpf(state: States.sp);
+String myCpf = Cpf.generate(state: States.sp);
 ```
 
 The CPF comes formatted by default, you can make it unformatted:
 ```dart
-String myCpf = generateCpf(formatted: false);
+String myCpf = Cpf.generate(formatted: false);
 ```
 
-Or if you have an unformatted CPF and want to format it:
+If you have an unformatted CPF and want to format it:
 ```dart
-String myCpf = generateCpf(formatted: false); // 32152405137
-String formattedCpf = formatCpf(myCpf);       // 321.524.051-37
+String myCpf = Cpf.generate(formatted: false); // 32152405137
+String formattedCpf = Cpf.format(myCpf);       // 321.524.051-37
+```
+
+Or maybe you want to strip your formatted CPF:
+```dart
+String unformattedCpf = Cpf.strip(formattedCpf); // 32152405137
 ```
 
 And you can validate a formatted or unformatted CPF:
