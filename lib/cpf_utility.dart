@@ -4,6 +4,7 @@
 /// to which the CPF will be generated.
 ///
 /// And you can validate a given CPF.
-library cpf_util;
+library cpf_utility;
 
-export 'src/cpf_util_base.dart';
+export 'src/states/states.dart';
+export 'src/cpf/cpf.dart';
