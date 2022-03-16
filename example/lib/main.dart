@@ -1,4 +1,4 @@
-import 'package:cpf_util/cpf_util.dart';
+import 'package:cpf_utility/cpf_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cpf/style.dart';
 
@@ -43,7 +43,7 @@ class _CpfPageState extends State<CpfPage> {
 
   void changeTextFieldState() {
     setState(() {
-      if (validateCpf(_cpfController.text)) {
+      if (Cpf.validate(_cpfController.text)) {
         _fieldColor = Colors.green;
         _suffixIcon = const Icon(Icons.check, color: Colors.black);
       } else {
@@ -84,7 +84,7 @@ class _CpfPageState extends State<CpfPage> {
                       onPressed: () {
                         setState(() {
                           cleanTextFiled();
-                          _cpfController.text = generateCpf();
+                          _cpfController.text = Cpf.generate();
                         });
                       },
                       child: const Text(
