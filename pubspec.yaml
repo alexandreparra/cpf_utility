@@ -1,7 +1,7 @@
 name: cpf_utility
 description: Generate, validate and format valid Brazilian CPF's.
 repository: https://github.com/duffhd/cpf_util
-version: 0.1.0
+version: 1.0.0
 
 environment:
   sdk: '>=2.16.1 <3.0.0'
