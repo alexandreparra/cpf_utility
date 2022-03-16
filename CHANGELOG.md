@@ -1,3 +1,7 @@
+## 1.0.1
+- Added a private constructor to both Cpf and CpfGenerator classes so they cannot be instantiated.
+- Updated the pubspec description.
+
 ## 1.0.0
 - Updated the library name to cpf_utility, as the cpf_util name was already taken by someone else on pub packages.
 - As there are major/breaking changes to the API the version is now 1.0.0
