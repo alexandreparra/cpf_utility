@@ -1,9 +1,11 @@
 /// The explanation of how the CPF creation works can be found here
 /// [Algoritmo do CPF](https://www.geradorcpf.com/algoritmo_do_cpf.htm).
 class CpfGenerator {
+  CpfGenerator._();
+
   static String generate(List<int> cpf) {
-    var firstTable = List.generate(9, (i) => i+2).reversed.toList();
-    var secondTable = List.generate(10, (i) => i+2).reversed.toList();
+    var firstTable = List.generate(9, (i) => i + 2).reversed.toList();
+    var secondTable = List.generate(10, (i) => i + 2).reversed.toList();
 
     _sumColumns(cpf, firstTable);
     _sumColumns(cpf, secondTable);

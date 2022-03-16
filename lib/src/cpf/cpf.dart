@@ -7,6 +7,8 @@ import 'cpf_generator.dart';
 
 /// Cpf utility functions namespace
 class Cpf {
+  Cpf._();
+
   /// Generate a valid CPF, [formatted] or not, based on the [state] if one is given, if not
   /// the State will be randomly generated too.
   static String generate({States? state, bool formatted = true}) {
