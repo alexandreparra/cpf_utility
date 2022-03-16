@@ -16,7 +16,7 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^1.0.0
-  cpf_util:
+  cpf_utility:
     path: ../
 
 flutter:
