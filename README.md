@@ -35,7 +35,7 @@ String unformattedCpf = Cpf.strip(formattedCpf); // 32152405137
 
 And you can validate a formatted or unformatted CPF:
 ```dart
-if (validateCpf(myCpf)) {
+if (Cpf.validate(myCpf)) {
   print("CPF is valid");
 } else {
   print("CPF isn't valid");
